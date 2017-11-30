@@ -74,11 +74,11 @@
          OpenSSL style configuration is required as described in the APR/native
          documentation -->
     
-    <!--
-	<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
-		maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
-			clientAuth="false" sslProtocol="TLS" />
-	-->
+    <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+               clientAuth="false" sslProtocol="TLS" 
+               keystoreFile="${user.home}/keystore.p12"
+               keystorePass="123456" />
     
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->

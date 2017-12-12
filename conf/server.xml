@@ -73,12 +73,8 @@
          style configuration. When using the APR/native implementation, the
          OpenSSL style configuration is required as described in the APR/native
          documentation -->
-    
-    <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
-               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
-               clientAuth="false" sslProtocol="TLS" 
-               keystoreFile="${user.home}/keystore.p12"
-               keystorePass="123456" />
+      
+    <Connector SSLEnabled="true" clientAuth="false" keystoreFile="conf/server.p12" keystorePass="123456" maxThreads="150" port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" scheme="https" secure="true" sslProtocol="TLS"/>
     
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
@@ -128,7 +124,7 @@
       
       
       
-      <Context docBase="C:\Program Files\Apache Software Foundation\Tomcat 8.0\wtpwebapps\SpringBootBase" path="/SpringBootBase" reloadable="true" source="org.eclipse.jst.jee.server:SpringBootBase"/></Host>
+      <Context docBase="SpringBootBase" path="/SpringBootBase" reloadable="true" source="org.eclipse.jst.jee.server:SpringBootBase"/></Host>
     </Engine>
   </Service>
 </Server>

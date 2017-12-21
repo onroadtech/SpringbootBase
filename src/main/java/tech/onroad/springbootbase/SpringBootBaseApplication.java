@@ -13,8 +13,9 @@ public class SpringBootBaseApplication {
 		SpringApplication.run(SpringBootBaseApplication.class, args);
 	}
 	
-	@RequestMapping("/")
+/*	@RequestMapping("/")
 	String home() {
 		return "Hello world!";
-	}
+	}*/
+	
 }

@@ -17,7 +17,18 @@ public class LoginController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "login", method = RequestMethod.POST)
+	@RequestMapping(value ="/welcome", method = RequestMethod.GET)
+	String welcome() {
+		return "welcome";
+	}
+	
+	@RequestMapping(value ="/login", method = RequestMethod.GET)
+	String login(Model model, UserVO user) {
+		model.addAttribute("user", user);
+		return "index";
+	}
+	
+	/*	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String login(Model model, UserVO user, StudentVO student){
 		System.out.println("POJO: " + user.getClass().getName() + 
 				", hash code: " + user.hashCode() + ", " + user.toString());
@@ -25,7 +36,7 @@ public class LoginController {
 				", hash code: " + student.hashCode() + ", " + student.toString());
 		model.addAttribute("user", user);
 		return "index";
-	}
+	}*/
 	
 	/*
 	@RequestMapping(value ="/", method = RequestMethod.GET)

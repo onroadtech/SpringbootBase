@@ -13,7 +13,7 @@
 	<h3 align="center">这是一个带有登录框的主页</h3> 
 	<div class="container">
 		<form class="form-signin" th:action="@{/login}" th:object="${user}" method="post">
-			<h2 class="form-signin-heading">请 登 录</h2>
+			<h2 class="form-signin-heading">请 登 录     <a th:href="@{/register}">注册</a></h2>
 			<input type="text" class="form-control" placeholder="账号" th:field="*{username}"/>
 			<input type="password" class="form-control" placeholder="密码" th:field="*{password}"/>
 			<p th:if="${param.logout}" class="error-code">已成功注销</p>

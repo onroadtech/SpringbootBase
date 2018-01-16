@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	
+	<title>Register</title>
+	
+	<link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
+	<link rel="stylesheet" th:href="@{css/customer/login.css}"/>
+</head>
+
+<body>
+	<h3 align="center">注册</h3> 
+	<div class="container">
+		<form class="form-signin" th:action="@{/reg}" th:object="${user}" method="post">
+			<input type="text" class="form-control" placeholder="账号" th:field="*{username}"/>
+			<input type="password" class="form-control" placeholder="密码" th:field="*{password}"/>
+			<p th:if="${param.success}" class="error-code">注册成功</p>
+			<p th:if="${param.error}" class="error-code">用户名已被注册</p>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+		</form>
+	</div>
+</body>
+</html>

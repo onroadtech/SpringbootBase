@@ -5,8 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import tech.onroad.springbootbase.bean.StudentVO;
-import tech.onroad.springbootbase.bean.UserVO;
+import tech.onroad.springbootbase.entity.UserVO;
 
 @Controller
 public class LoginController {
